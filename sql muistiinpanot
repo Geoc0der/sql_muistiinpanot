@@ -2,6 +2,6 @@
 
 update suomen_akatemia_bioalat_2001_2023 set field_2 = replace(field_2,' ','');
 
---Kuinka valita sellaisia kohteita, joissa tiettyjä sanoja stringeissä:
+--Kuinka valita maastotietokannasta sellaisia kohteita, joissa tiettyjä sanoja stringeissä, toimii Qgisissä:
 
 select * from paikannimi where teksti like '%pakopir%' or teksti like '%piilopir%';
