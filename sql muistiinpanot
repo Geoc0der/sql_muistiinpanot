@@ -6,6 +6,6 @@ update suomen_akatemia_bioalat_2001_2023 set field_2 = replace(field_2,' ','');
 
 select * from paikannimi where teksti like '%pakopir%' or teksti like '%piilopir%';
 
---tietojen lisääminen uuteen sarakkeeseen
+--tietojen lisääminen uuteen sarakkeeseen, tutorial: https://www.youtube.com/watch?v=V9rwY86rMKQ
 
 insert into xxx
