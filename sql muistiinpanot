@@ -1,11 +1,23 @@
---Kuinka poistaa välilyönnit stringin keskeltä:
+--Postgresin avaaminen command linella:
+psql postgres
 
+--Olemassa olevien tietokantojen listaaminen:
+\l
+
+--Kuinka yhdistää tietokantaan:
+\c *tietokannan nimi*
+
+--Kuinka listata tietokannan taulut:
+\dt
+
+--Kuinka palata alkuun
+q
+
+--Kuinka poistaa välilyönnit stringin keskeltä:
 update suomen_akatemia_bioalat_2001_2023 set field_2 = replace(field_2,' ','');
 
 --Kuinka valita maastotietokannasta sellaisia kohteita, joissa tiettyjä sanoja stringeissä, toimii Qgisissä:
-
 select * from paikannimi where teksti like '%pakopir%' or teksti like '%piilopir%';
 
---tietojen lisääminen uuteen sarakkeeseen, tutorial: https://www.youtube.com/watch?v=V9rwY86rMKQ
-
+--tietojen lisääminen uuteen sarakkeeseen:
 insert into xxx
