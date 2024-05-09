@@ -10,8 +10,11 @@ psql postgres
 --Kuinka listata tietokannan taulut:
 \dt
 
---Kuinka palata alkuun
+--Kuinka palata alkuun:
 q
+
+--Taulun kuvailu:
+\d *taulun nimi*
 
 --Kuinka poistaa välilyönnit stringin keskeltä:
 update suomen_akatemia_bioalat_2001_2023 set field_2 = replace(field_2,' ','');
