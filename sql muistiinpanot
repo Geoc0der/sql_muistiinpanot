@@ -1,3 +1,10 @@
+--Postgisin asentaminen command linella:
+create extension postgis;
+
+--Uuden tietokannan luonti ja siihen yhdistäminen
+create database ruututietokanta;
+/c ruututietokanta;
+
 --Postgresin avaaminen command linella:
 psql postgres
 
