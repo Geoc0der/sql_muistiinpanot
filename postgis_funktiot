@@ -1,0 +1,2 @@
+--Testifunktio, jossa valitaan intersectaavat polygonit
+Select he_vakiy from rttk250m_2023 join testi_polygon_2 on ST_Intersects(rttk250m_2023.geom,testi_polygon_2.geom);
