@@ -8,3 +8,6 @@ select find_srid('public','ruudukko_suomi','geom');
 ALTER TABLE melontareitti_toka ADD COLUMN pituuskm REAL;
 UPDATE melontareitti_toka
 SET pituuskm = ST_LENGTH(geom) / 1000;
+
+--Kuinka luoda pistemuotoinen taulu
+create table kosket (id serial, name varchar, geom geometry(Point, 3067));
