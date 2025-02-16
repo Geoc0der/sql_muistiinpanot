@@ -3,3 +3,8 @@ Select he_vakiy from rttk250m_2023 join testi_polygon_2 on ST_Intersects(rttk250
 
 --Kuinka löytää taulukon epsg-numero
 select find_srid('public','ruudukko_suomi','geom');
+
+--Kuinka lasketaan taulun viivamuotoisten geometrioiden pituudet
+ALTER TABLE melontareitti_toka ADD COLUMN pituuskm REAL;
+UPDATE melontareitti_toka
+SET pituuskm = ST_LENGTH(geom) / 1000;
