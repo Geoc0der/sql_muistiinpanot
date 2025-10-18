@@ -35,5 +35,8 @@ insert into xxx
 --Shapefilen lisääminen (tutorial):
 --https://mapscaping.com/loading-spatial-data-into-postgis/
 
+--Kuinka näyttää rivien lukumäärä
+select count(*) from kuntarajat2025;
+
 --Sql-kyselyssä printattavien tulosten lukumäärän rajoittaminen
 SELECT * FROM "ProjisoidunPalstanSijaintitiedot" LIMIT 10;
