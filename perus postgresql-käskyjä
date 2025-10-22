@@ -45,4 +45,4 @@ SELECT * FROM "ProjisoidunPalstanSijaintitiedot" LIMIT 10;
 select nimi, he_0_2 from postinumero25 order by he_0_2 desc limit 30;
 
 --Sama ku edellinen mut printataan prosenttiosuudet ja filtteröidään 0-arvot pois et ei tuu divide by zero-erroria ja kans nullit pois
-SELECT (he_0_2::float / he_vakiy) * 100 AS kolumni FROM postinumero25 WHERE he_0_2 IS NOT NULL AND he_vakiy > 0 ORDER BY kolumni DESC LIMIT 30;
+SELECT nimi, (he_0_2::float / he_vakiy) * 100 AS kolumni FROM postinumero25 WHERE he_0_2 IS NOT NULL AND he_vakiy > 0 ORDER BY kolumni DESC LIMIT 30;
