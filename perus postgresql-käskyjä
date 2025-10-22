@@ -40,3 +40,6 @@ select count(*) from kuntarajat2025;
 
 --Sql-kyselyssä printattavien tulosten lukumäärän rajoittaminen
 SELECT * FROM "ProjisoidunPalstanSijaintitiedot" LIMIT 10;
+
+--Sql-kyselyssä printattavien tulosten lukumäärän rajoittaminen ja järjestäminen
+select nimi, he_0_2 from postinumero25 order by he_0_2 desc limit 30;
