@@ -50,3 +50,6 @@ SELECT nimi, (he_0_2::float / he_vakiy) * 100 AS kolumni FROM postinumero25 WHER
 --Liitetään paavo-tietokantaan kunnan nimet kuntaraja-aineistosta
 ALTER TABLE postinumero25 ADD COLUMN kuntanimi TEXT;
 UPDATE postinumero25 SET kuntanimi = t1.nimi FROM kuntarajat2025 t1 WHERE postinumero25.kunta = t1.kunta;
+
+--Kuinka vaihtaa salasana. Tämän käskyn jälkeen syötetään uusi salasana 2 kertaa
+\password *käyttäjätunnus*
