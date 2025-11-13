@@ -53,3 +53,6 @@ UPDATE postinumero25 SET kuntanimi = t1.nimi FROM kuntarajat2025 t1 WHERE postin
 
 --Kuinka vaihtaa salasana. Tämän käskyn jälkeen syötetään uusi salasana 2 kertaa
 \password *käyttäjätunnus*
+
+--Muutetaan 0-valuet -1 arvoiksi, koska ei voi jakaa nollalla
+update postinumero25 set he_vakiy=-1 where he_vakiy=0;
